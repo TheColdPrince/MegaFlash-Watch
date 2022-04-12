@@ -1,0 +1,182 @@
+@import "compass/css3";
+
+$pink: #c42525;
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: transparent;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  display: block;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.wrap {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-left: 20px;
+}
+
+.portfolio {
+  margin: 0;
+  overflow: hidden;
+  padding: 0;
+}
+.portfolio li {
+  float: left;
+  width: 100%;
+  list-style: none;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  -webkit-backface-visibility: hidden;
+  -webkit-perspective: 1000;
+}
+.portfolio figure {
+  margin: 0 20px 20px 0;
+  position: relative;
+  text-align: center;
+  border: 3px solid #000;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  overflow: hidden;
+  background: url("http://www.seanmichael.me/bathtubgin/wp-content/themes/sean-michael-design/images/fancybox_overlay.png") repeat transparent;
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+.portfolio figure:hover {
+  border: 3px solid #D29990;
+}
+.portfolio figure:hover img {
+  opacity: .3;
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+  -moz-transform: scale(5);
+  -ms-transform: scale(5);
+  -webkit-transform: scale(5);
+  transform: scale(5);
+}
+.portfolio figure:hover figcaption {
+  top: 50%;
+  margin-top: -20px;
+}
+.portfolio figure:hover h3 {
+  bottom: 70%;
+}
+.portfolio figcaption {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  -moz-transition: all 0.2s ease-in-out 0.2s;
+  -o-transition: all 0.2s ease-in-out 0.2s;
+  -webkit-transition: all 0.2s ease-in-out;
+  -webkit-transition-delay: 0.2s;
+  transition: all 0.2s ease-in-out 0.2s;
+}
+
+a {
+  background-color: #D29990;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  text-shadow: 0 -1px 1px #cd452f;
+  text-decoration: none;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  display: inline-block;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+a:hover {
+  background-color: #e28e80;
+}
+
+h3 {
+  color: #fff;
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+  font-weight: 500;
+  padding: 1em .7em;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  width: 100%;
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  -moz-transition: all 0.15s ease-in-out 0.4s;
+  -o-transition: all 0.15s ease-in-out 0.4s;
+  -webkit-transition: all 0.15s ease-in-out;
+  -webkit-transition-delay: 0.4s;
+  transition: all 0.15s ease-in-out 0.4s;
+}
+
+.tabs {
+  margin: 0 0 20px 0;
+  padding: 0;
+  overflow: hidden;
+}
+.tabs li {
+  list-style: none;
+  float: left;
+  margin: 20px 20px 0 0;
+}
+
+[data-filter*="group"] {
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  border-radius: 8px;
+  width: auto;
+  height: auto;
+  padding: 0 1em;
+  border-bottom: 4px solid #c3786c;
+  position: relative;
+  -moz-transition: none;
+  -o-transition: none;
+  -webkit-transition: none;
+  transition: none;
+}
+[data-filter*="group"]:active {
+  top: 3px;
+  border-bottom: none;
+}
+[data-filter*="group"].active {
+  background-color: #e28e80;
+}
+
+@media (min-width: 460px) {
+  .portfolio li {
+    width: 50%;
+  }
+}
+@media (min-width: 740px) {
+  .portfolio li {
+    width: 33%;
+  }
+}
